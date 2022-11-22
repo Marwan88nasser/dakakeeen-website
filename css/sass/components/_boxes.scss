@@ -129,3 +129,57 @@
     }
   }
 }
+
+.headingBanner {
+  background: #f9c9ca !important;
+  padding: 30px 15px;
+
+  h2 {
+    font-size: 82px;
+    line-height: 2em;
+    margin-bottom: 0px !important;
+    display: block;
+    color: #0e4068;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: bold;
+}
+}
+.title-page {
+  background: transparent !important;
+  padding-top: 15px;
+  padding-bottom: 15px;
+    nav {
+      padding-bottom: 270px;
+      border-bottom: 1px #ccc solid;
+        ol.breadcrumb {
+          margin: 0;
+          li {
+            color: #0e4068 !important;
+            text-decoration: none !important;
+            font-weight: 600;
+            transition: all .3s;
+            a {
+              color: #0e4068 !important;
+              text-decoration: none !important;
+              font-weight: 600;
+              transition: all .3s;
+          }
+          }
+      }
+    } 
+}
+
+.img-after2 {
+  position: absolute;
+  z-index: -1;
+  height: 500px;
+  width: 100%;
+  right: 0;
+  left: 0;
+  img {
+    height: 100%;
+    margin: auto;
+    display: block;
+}
+}
