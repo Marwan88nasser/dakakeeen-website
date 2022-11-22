@@ -1,0 +1,12 @@
+.brand-swiper {
+  max-height: 140px;
+  .swiper-wrapper {
+    .swiper-slide {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

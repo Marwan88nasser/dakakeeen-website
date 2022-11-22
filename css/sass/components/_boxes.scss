@@ -1,0 +1,131 @@
+.box-text {
+  p {
+    font-size: 19px;
+    color: $secDark-color;
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+  img {
+    width: 500px;
+    margin-bottom: 8px;
+    @include maxWidth(md)  {
+      width: 290px;
+    }
+  }
+  .special-heading {
+    position: relative;
+    font-weight: bold;
+    color: $sec-color;
+    font-size: 28px;
+    &.more-lg {
+      &::before {
+        max-width: 550px;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      max-width: 230px;
+      height: 4px;
+      left: 0;
+      right: 0;
+      bottom: -17px;
+      border-radius: 0px 5px;
+      margin: 0 auto;
+      background-size: 200px;
+      background-repeat: no-repeat;
+      background-color: $sec-color;
+    }
+  }
+}
+
+.box-imp-text {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px rgba(112, 112, 112, 0.25) solid;
+  padding: 30px;
+  margin-top: 40px;
+  p {
+    color: $third-color;
+    font-weight: bold;
+    line-height: 35px;
+    letter-spacing: 1;
+  }
+}
+
+.box-image {
+  @include flex-between;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+  .image-holder {
+    img {
+      width: 200px;
+      height: 115px;
+    }
+  }
+}
+
+.statstic-box {
+  h4 {
+    font-weight: 400;
+    font-size: 78px;
+    color: $third-color;
+    span {
+      font-weight: 100;
+    }
+  }
+  p {
+    margin-bottom: 0px;
+    font-size: 15px;
+  }
+}
+
+.followUs-box {
+  background-color: rgba(237, 126, 116, 0.5);
+  .follow-option {
+    .follow-heding {
+      position: relative;
+      color: $white-color;
+      font-size: 30px;
+      font-weight: 700;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        max-width: 210px;
+        height: 4px;
+        left: 0;
+        right: 0;
+        bottom: -17px;
+        border-radius: 0px 5px;
+        margin: 0 auto;
+        background-color: $white-color;
+      }
+    }
+    .twitter-timeline {
+      color: #007bff;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: 400;
+      &:hover {
+        color: #0056b3;
+        text-decoration: underline;
+      }
+    }
+    .follow-button {
+      padding: 5px 23px;
+      background-color: #1d9bf0;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 9999px;
+      display: block;
+      font-weight: 500;
+      margin: 28px auto 0pc;
+      width: fit-content;
+      &:hover {
+        background-color: #0c7abf;
+      }
+    }
+  }
+}

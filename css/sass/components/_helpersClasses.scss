@@ -1,0 +1,9 @@
+.hidden-y-x {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.r-border {
+  @include minWidth(lg) {
+    border-right: 2px solid $third-color;
+  }
+}

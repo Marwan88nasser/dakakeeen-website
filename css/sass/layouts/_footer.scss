@@ -1,0 +1,85 @@
+.main-footer {
+  .top-footer {
+    img {
+      width: 250;
+      animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    }
+    .box-text {
+      font-size: 16px;
+      font-weight: bold;
+      color: $third-color;
+      p {
+        font-size: 16px;
+        line-height: 27px;
+        font-weight: bold;
+        margin-bottom: 18px;
+      }
+    }
+    .sanad-box {
+      @include flex-center;
+      @include Full-w-h;
+      flex-direction: column;
+      gap: 10px;
+      .icon-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        .circle-icon {
+          @include flex-center;
+          @include circle(38px, 38px);
+          border: 2px solid $white-color;
+          transition: $main-transition;
+          i,
+          svg {
+            color: $white-color;
+          }
+          &.one {
+            &:hover {
+              background-color: #1da1f2;
+              border-color: #1da1f2;
+            }
+          }
+          &.two {
+            &:hover {
+              background-color: #e1306c;
+              border-color: #e1306c;
+            }
+          }
+          &.three {
+            &:hover {
+              background-color: #0088ff;
+              border-color: #0088ff;
+            }
+          }
+        }
+      }
+      .inp-holder {
+        width: 100%;
+        p {
+          margin-bottom: 5;
+          font-size: 11px;
+          color: $trouble-3;
+          text-align: center;
+        }
+      }
+      .btn-holder {
+        .btn-join {
+          width: 170px;
+          border-radius: 55px;
+          font-size: 17px;
+          padding: 10px;
+          background-color: $third-color;
+          &:hover {
+            background-color: $main-color;
+          }
+        }
+      }
+    }
+  }
+  .bottom-footer {
+    background-color: $third-color;
+    color: $white-color;
+    font-size: 15px;
+  }
+}

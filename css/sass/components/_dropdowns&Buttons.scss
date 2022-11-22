@@ -1,0 +1,15 @@
+.btn-join {
+  display: block;
+  font-size: 23px;
+  width: fit-content;
+  padding: 12px 30px;
+  border-radius: 10px;
+  color: $white-color;
+  font-weight: bold;
+  transition: $sm-transition;
+  background-color: $sec-color;
+  &:hover {
+    color: $white-color;
+    background-color: $main-color;
+  }
+}
