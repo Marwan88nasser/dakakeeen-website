@@ -11,23 +11,27 @@ const swiper = new Swiper(swiperElement, {
   slidesPerView: 5,
   loop: true,
   centeredSlides: true,
-  speed: 1300,
+  speed: 1000,
   autoplay: {
-    delay: 3000,
+    delay: 2500,
     disableOnInteraction: false,
   },
   breakpoints: {
-    640: {
+    "@0.00": {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    "@0.75": {
       slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    "@1.00": {
+      slidesPerView: 3,
       spaceBetween: 20,
     },
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 20,
-    },
-    1024: {
-      slidesPerView: 8,
-      spaceBetween: 20,
+    "@1.50": {
+      slidesPerView: 7,
+      spaceBetween: 15,
     },
   },
   pagination: {

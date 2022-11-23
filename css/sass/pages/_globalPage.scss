@@ -128,3 +128,24 @@ select:focus {
 .join-holder {
   background-color: #e8d4c6;
 }
+
+.text-aboutUs {
+  h6 {
+    color: #000080;
+    font-weight: 800;
+  }
+  p {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 32px;
+  }
+  ul {
+    list-style: disc;
+    padding-right: 40px;
+    li {
+      font-weight: 600;
+      font-size: 19px;
+      line-height: 32px;
+    }
+  }
+}

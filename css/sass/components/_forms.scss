@@ -1,30 +1,139 @@
-.main-inp {
- margin: 15px 0 0;
- background: #fff;
- display: block;
- width: 100%;
- height: calc(2.88rem + 2px);
- padding: 0.6rem 1.75rem;
- font-size: 1.2rem;
- line-height: 1.4;
- color: #495057;
- background-color: #fff;
- background-clip: padding-box;
- border: 1px solid #ced4da;
- border-radius: 0;
- -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
- transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
- transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
- transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
- &:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #c6962d;
-  outline: 0;
-  -webkit-box-shadow: unset;
-  box-shadow: unset;
+select {
+  &.main-inp {
+  }
 }
+.main-inp {
+  margin: 15px 0 0;
+  background: $white-color;
+  display: block;
+  width: 100%;
+  height: calc(2.88rem + 2px);
+  padding: 0.3rem 0.9rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #495057;
+  background-color: $white-color;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0;
+  -webkit-transition: border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  &:focus {
+    color: #495057;
+    background-color: $white-color;
+    border-color: #c6962d;
+    outline: 0;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+  }
 }
 textarea.main-inp {
- height: auto;
+  height: auto;
+}
+
+.check-req {
+  display: block;
+  position: relative;
+  padding-right: 32px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 18px;
+  margin-top: 15px;
+  color: #0e4068 !important;
+  font-size: 16px;
+  font-weight: bold;
+  .won-check {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    &:checked ~ .checkmark {
+      background-color: #ed7e74;
+      border-color: #ed7e74;
+      &::after {
+        display: block;
+      }
+    }
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    background-color: $white-color;
+    border: 1px #d7d7d6 solid;
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      right: 6px;
+      top: 2px;
+      width: 7px;
+      height: 12px;
+      border: solid $white-color;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+.request-form {
+  .header-form {
+    .convert-lang {
+      font-weight: 700;
+      font-size: 19px;
+      color: $third-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.send-label {
+  font-size: 18px;
+  font-weight: 400;
+  a {
+    color: #007bff;
+    &:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+  }
+}
+
+.send-form {
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  color: $third-color;
+  background-color: #f9c9ca;
+  font-weight: bold;
+  opacity: .5;
+  cursor: not-allowed;
+  transition: $main-transition;
+  &.ready {
+    cursor: pointer;
+    opacity: 1;
+    background-color: $sec-color;
+    color: $white-color;
+    font-weight: 400;
+    &:hover {
+      background-color: $main-color;
+    }
+  }
 }

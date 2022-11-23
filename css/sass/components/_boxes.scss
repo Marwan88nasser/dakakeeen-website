@@ -8,7 +8,7 @@
   img {
     width: 500px;
     margin-bottom: 8px;
-    @include maxWidth(md)  {
+    @include maxWidth(md) {
       width: 290px;
     }
   }
@@ -143,31 +143,31 @@
     letter-spacing: 1px;
     text-align: center;
     font-weight: bold;
-}
+  }
 }
 .title-page {
   background: transparent !important;
   padding-top: 15px;
   padding-bottom: 15px;
-    nav {
-      padding-bottom: 270px;
-      border-bottom: 1px #ccc solid;
-        ol.breadcrumb {
-          margin: 0;
-          li {
-            color: #0e4068 !important;
-            text-decoration: none !important;
-            font-weight: 600;
-            transition: all .3s;
-            a {
-              color: #0e4068 !important;
-              text-decoration: none !important;
-              font-weight: 600;
-              transition: all .3s;
-          }
-          }
+  nav {
+    padding-bottom: 270px;
+    border-bottom: 1px #ccc solid;
+    ol.breadcrumb {
+      margin: 0;
+      li {
+        color: #0e4068 !important;
+        text-decoration: none !important;
+        font-weight: 600;
+        transition: all 0.3s;
+        a {
+          color: #0e4068 !important;
+          text-decoration: none !important;
+          font-weight: 600;
+          transition: all 0.3s;
+        }
       }
-    } 
+    }
+  }
 }
 
 .img-after2 {
@@ -181,5 +181,71 @@
     height: 100%;
     margin: auto;
     display: block;
+  }
 }
+
+.box-store {
+  h5 {
+    color: $yellowDark;
+    font-size: 38px;
+    margin-bottom: 10px;
+    font-weight: 900;
+  }
+  p {
+    text-align: justify;
+    line-height: 30px;
+    color: $trouble-5;
+    margin-bottom: 0px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.images-container {
+  .image-box {
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    width: 200px;
+    height: 120px;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $black-color;
+      opacity: 0;
+      transition: $sm-transition;
+      z-index: 11;
+    }
+    &:hover::before {
+      opacity: 0.4;
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+    &:hover .image-caption {
+      opacity: 1;
+    }
+    img {
+      transition: $sm-transition;
+      border-radius: 4px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .image-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $white-color;
+      opacity: 0;
+      transition: $sm-transition;
+      z-index: 11;
+    }
+  }
 }
