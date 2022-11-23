@@ -220,6 +220,11 @@
   padding-bottom: 270px;
   border-bottom: 1px #ccc solid;
 }
+@media (max-width: 767.98px) {
+  .title-page nav {
+    padding-bottom: 25px;
+  }
+}
 .title-page nav ol.breadcrumb {
   margin: 0;
 }
@@ -243,9 +248,10 @@
   width: 100%;
   right: 0;
   left: 0;
+  bottom: -340px;
 }
 .img-after2 img {
-  height: 100%;
+  height: auto;
   margin: auto;
   display: block;
 }

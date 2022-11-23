@@ -152,6 +152,9 @@
   nav {
     padding-bottom: 270px;
     border-bottom: 1px #ccc solid;
+    @include maxWidth(sm) {
+      padding-bottom: 25px;
+    }
     ol.breadcrumb {
       margin: 0;
       li {
@@ -177,8 +180,9 @@
   width: 100%;
   right: 0;
   left: 0;
+  bottom: -340px;
   img {
-    height: 100%;
+    height: auto;
     margin: auto;
     display: block;
   }
